@@ -18,12 +18,14 @@ export default class App extends Component {
       <BrowserRouter>
         <Banner />
 
-        <Switch>
-          <Route path="/inicio" component={Inicio} />
-          <Route path="/sobre" component={Sobre} />
-          <Route path="/contato" component={Contato} />
-          <Redirect to="/inicio" />
-        </Switch>
+        <div className="conteudo">
+          <Switch>
+            <Route path="/inicio" component={Inicio} />
+            <Route path="/sobre" component={Sobre} />
+            <Route path="/contato" component={Contato} />
+            <Redirect to="/inicio" />
+          </Switch>
+        </div>
       </BrowserRouter>
     )
   }

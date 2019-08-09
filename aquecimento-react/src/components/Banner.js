@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+
 import './Banner.css';
 
 export default class Banner extends Component {
@@ -6,17 +8,17 @@ export default class Banner extends Component {
         return (
             <div className="banner">
                 <span id="titulo">
-                    <a href="/inicio">Aquecimento</a>
+                    <Link to="/inicio">Aquecimento</Link>
                 </span>
                 <ul id="menu">
                     <li>
-                        <a href="/inicio">Início</a>
+                        <Link to="/inicio">Início</Link>
                     </li>
                     <li>
-                        <a href="/sobre">Sobre</a>
+                        <Link to="/sobre">Sobre</Link>
                     </li>
                     <li>
-                        <a href="/contato">Contato</a>
+                        <Link to="/contato">Contato</Link>
                     </li>
                 </ul>
             </div>
