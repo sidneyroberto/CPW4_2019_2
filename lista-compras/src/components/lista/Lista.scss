@@ -10,6 +10,13 @@
         padding-left: 5px;
     }
 
+    #mensagemNenhumaLista {
+        color: $cor-titulo;
+        font-family: $fonte-principal;
+        text-align: center;
+        margin-top: 40px;
+    }
+
     #listagem {
         margin: 5px;
 
@@ -28,14 +35,46 @@
         margin: 5px;
 
         #botaoNovaLista {
-            float: right;
-            padding: 15px;
+            padding: 15px 20px 15px 15px;
             background-color: $cor-menu;
             border-radius: 50%;
+            float: right;
 
             img {
-                width: 50px;
+                width: 40px;
             }
         }
     }
+}
+
+#formNovaLista {
+    padding: 10px;
+
+    input {
+        display: block;
+        margin: auto;
+
+        &[type=text] {
+            width: 80%;
+            height: 35px;
+            font-size: 100%;
+            border: 1px solid $cor-menu;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-family: $fonte-principal;
+        }
+
+        &[type=submit] {
+            width: 40%;
+            padding: 15px;
+            background-color: $cor-menu;
+            color: white;
+            border-radius: 7px;
+            font-size: 120%;
+            font-family: $fonte-principal;
+        }
+    }
+
+
+
 }
