@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Menu from '../../components/menu/Menu';
 import paginaAnterior from '../../img/paginaAnterior.png';
+import ListaService from '../../services/ListaService';
 
 export default class Lista extends Component {
 
@@ -9,8 +10,11 @@ export default class Lista extends Component {
         super(props);
 
         this.state = {
-            lista: this.props.location.state.lista
+            lista: this.props.location.state.lista,
+            itensFiltrados: []
         };
+
+        this.service = new ListaService();
     }
 
     /**
@@ -20,7 +24,9 @@ export default class Lista extends Component {
     filtrarItens = (event) => {
         // Pega o valor digitado no campo de filtro
         let filtro = event.target.value;
-        console.log(filtro);
+        let itensFiltrados =
+            this.service.recuperarItens(filtro);
+        console.log(itensFiltrados);
     }
 
     render() {
