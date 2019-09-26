@@ -6,6 +6,7 @@ import logo from '../../img/logo.png';
 import ListaService from '../../services/ListaService';
 import './Lista.scss';
 import adicionar from '../../img/adicionar.png';
+import rotas from '../../constants/rotas';
 
 export default class Listas extends Component {
 
@@ -35,7 +36,16 @@ export default class Listas extends Component {
     render() {
         const listas =
             this.state.listas.map(lista => (
-                <div className="item" key={lista._id}>{lista.nome}</div>
+                <Link
+                    to={
+                        {
+                            pathname: rotas.LISTA,
+                            state: { lista }
+                        }
+                    }
+                    key={lista._id}>
+                    <div className="item">{lista.nome}</div>
+                </Link>
             ));
 
         return (

@@ -23,11 +23,15 @@
         .item {
             text-align: center;
             font-family: $fonte-principal;
-            color: $cor-titulo;
             background-color: $cor-fundo-item1;
             padding: 25px;
             border-radius: 5px;
             margin-bottom: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: $cor-titulo;
         }
     }
 
