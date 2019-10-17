@@ -31,22 +31,49 @@ export default class Lista extends Component {
         this.setState({ itensFiltrados });
     }
 
+    /**
+     * Inclui um novo item na lista
+     */
+    incluirItem = item => {
+        let { lista } = this.state;
+        /**
+         * Se a lista já possui o vetor de
+         * itens, mantém o vetor. Caso contrário,
+         * cria o vetor de itens na lista.
+         */
+        lista.itens = lista.itens ? lista.itens : [];
+        // Inclui o novo item
+        lista.itens.push(item);
+        this.setState({ lista });
+    }
+
     render() {
 
-        let { lista, itensFiltrados } = this.state;
-        lista.itens = lista.itens ? lista.itens : [];
+        let {
+            lista,
+            itensFiltrados
+        } = this.state;
         console.log(lista);
 
-        const listaItensFiltrados = itensFiltrados.map((item, key) => (
-            <div key={key} className="itemFiltrado">
-                <span>{item.descricao}</span>
-                <input type="number" name="quantidade" id="quantidade" />
-                <span>{item.unidade}</span>
-                <button>
-                    <img src={incluir} alt="Incluir" />
-                </button>
-            </div>
-        ));
+        const listaItensFiltrados = itensFiltrados.map((item, key) => {
+            item.quantidade = 1;
+            return (
+                <div key={key} className="itemFiltrado">
+                    <span>{item.descricao}</span>
+                    <input
+                        value={item.quantidade}
+                        type="number"
+                        name="quantidade"
+                        min="0.001"
+                        id="quantidade" />
+                    <span>{item.unidade}</span>
+                    <button onClick={() => this.incluirItem(item)}>
+                        <img src={incluir} alt="Incluir" />
+                    </button>
+                </div>
+            )
+        }
+        );
 
         return (
             <div>

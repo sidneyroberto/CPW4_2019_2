@@ -54,9 +54,9 @@
 
     .itemFiltrado {
         font-family: $fonte-principal;
-        font-size: 110%;
+        font-size: 90%;
         padding: 10px;
-        width: 40%;
+        width: 50%;
         margin: 0px auto 10px auto;
         background-color: $cor-fundo-item2;
         border-radius: 5px;
@@ -73,21 +73,22 @@
 
         input {
             margin-right: 5px;
-            height: 30px;
+            height: 20px;
             font-size: 100%;
             border: 1px solid $cor-menu;
             border-radius: 5px;
             font-family: $fonte-principal;
             padding: 5px 10px;
-            width: 50px;
+            width: 40px;
         }
 
         button {
             background: none;
             border: none;
+            outline: none;
 
             img {
-                width: 50px;
+                width: 40px;
                 vertical-align: middle;
             }
         }
