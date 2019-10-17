@@ -79,7 +79,7 @@ export default class Listas extends Component {
                             </p>
                         }
 
-                        <div id="listagem">
+                        <div className="listagem">
                             {listas}
                         </div>
 

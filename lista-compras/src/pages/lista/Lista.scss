@@ -10,29 +10,17 @@
         padding-left: 5px;
     }
 
+    #nomeLista {
+        text-align: center;
+        color: $cor-titulo;
+        font-family: $fonte-principal;
+    }
+
     #mensagemNenhumaLista {
         color: $cor-titulo;
         font-family: $fonte-principal;
         text-align: center;
         margin-top: 40px;
-    }
-
-    #listagem {
-        margin: 5px;
-
-        .item {
-            text-align: center;
-            font-family: $fonte-principal;
-            background-color: $cor-fundo-item1;
-            padding: 25px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
-
-        a {
-            text-decoration: none;
-            color: $cor-titulo;
-        }
     }
 
     #areaBotao {
@@ -51,7 +39,67 @@
     }
 }
 
-#formNovaLista {
+.listagem {
+    margin: 5px;
+
+    .item {
+        text-align: center;
+        font-family: $fonte-principal;
+        background-color: $cor-fundo-item1;
+        padding: 25px;
+        width: 50%;
+        border-radius: 5px;
+        margin: 0px auto 20px auto;
+    }
+
+    .itemFiltrado {
+        font-family: $fonte-principal;
+        font-size: 110%;
+        padding: 10px;
+        width: 40%;
+        margin: 0px auto 10px auto;
+        background-color: $cor-fundo-item2;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px #cccccc;
+        text-align: center;
+
+        * {
+            vertical-align: middle;
+        }
+
+        span:first-child {
+            margin-right: 10px;
+        }
+
+        input {
+            margin-right: 5px;
+            height: 30px;
+            font-size: 100%;
+            border: 1px solid $cor-menu;
+            border-radius: 5px;
+            font-family: $fonte-principal;
+            padding: 5px 10px;
+            width: 50px;
+        }
+
+        button {
+            background: none;
+            border: none;
+
+            img {
+                width: 50px;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: $cor-titulo;
+    }
+}
+
+form {
     padding: 10px;
 
     input {
@@ -59,7 +107,7 @@
         margin: auto;
 
         &[type=text] {
-            width: 80%;
+            width: 50%;
             height: 35px;
             font-size: 100%;
             border: 1px solid $cor-menu;
@@ -79,7 +127,4 @@
             font-family: $fonte-principal;
         }
     }
-
-
-
 }
