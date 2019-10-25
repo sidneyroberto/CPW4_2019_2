@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "decorativa";
+    src: url(./LuckiestGuy-Regular.ttf);
+}
+
+@font-face {
+    font-family: "padrao";
+    src: url(./Raleway-Regular.ttf);
+}
+
+@font-face {
+    font-family: "negrito";
+    src: url(./Raleway-ExtraBold.ttf);
+}
+
+$fonte-decorativa: "decorativa";
+$fonte-padrao: "padrao";
+$fonte-negrito: "negrito";
