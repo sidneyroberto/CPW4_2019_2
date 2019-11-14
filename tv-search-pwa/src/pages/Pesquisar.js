@@ -5,6 +5,7 @@ import logo from '../img/logo.png';
 import imgDefault from '../img/imgDefault.png';
 import Header from '../components/Header';
 import SeriesService from '../services/SeriesService';
+import './Pesquisar.scss';
 
 export default class Pesquisar extends Component {
 
@@ -29,7 +30,8 @@ export default class Pesquisar extends Component {
          */
         this.setState({
             carregando: true,
-            textoPesquisa: consulta
+            textoPesquisa: consulta,
+            series: []
         });
 
         this.service
@@ -87,8 +89,9 @@ export default class Pesquisar extends Component {
                     this.state.carregando &&
                     <div id="areaLoading">
                         <ReactLoading
+                            id="animacao"
                             type="bars"
-                            color="#000000"
+                            color="#00b5cc"
                             height="60px"
                             width="60px" />
                     </div>
