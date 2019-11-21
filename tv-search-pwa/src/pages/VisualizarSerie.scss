@@ -1,0 +1,32 @@
+@import '../fonts/Fontes';
+
+#areaCartaz,
+#areaDadosSerie {
+    display: inline-block;
+}
+
+#areaCartaz {
+    width: 30%;
+    text-align: center;
+    vertical-align: top;
+    padding-top: 25px;
+}
+
+#areaDadosSerie {
+    width: 70%;
+    font-family: $fonte-padrao;
+
+    h2 {
+        font-family: $fonte-negrito;
+    }
+
+    .nomeCampo {
+        font-family: $fonte-negrito;
+        margin-right: 5px;
+    }
+
+    #sinopse {
+        display: inline;
+    }
+
+}

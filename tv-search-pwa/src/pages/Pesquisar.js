@@ -49,8 +49,6 @@ export default class Pesquisar extends Component {
 
     render() {
         const { series, textoPesquisa } = this.state;
-        console.log(series);
-
 
         const listaSeries = series.map(serie => {
             let imagem = imgDefault;
