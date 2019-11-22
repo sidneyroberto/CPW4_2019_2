@@ -17,10 +17,14 @@ export default class VisualizarSerie extends Component {
             for (let i = 1; i < quantidadeGeneros; i++) {
                 generos += `, ${dados.genres[i]}`;
             }
+        } else {
+            generos = 'Não informado';
         }
 
         const titulo = dados.name;
-        const lingua = dados.language;
+        const lingua = dados.language
+            ? dados.language
+            : 'Não informada';
 
         /*let canalTV = '';
         if (dados.network) {
@@ -39,8 +43,9 @@ export default class VisualizarSerie extends Component {
          * remover tags da string
          */
         const regex = /(<([^>]+)>)/ig;
-        const sinopse =
-            dados.summary.replace(regex, '');
+        const sinopse = dados.summary
+            ? dados.summary.replace(regex, '')
+            : 'Não informada';
 
 
 
@@ -64,7 +69,7 @@ export default class VisualizarSerie extends Component {
                     <br />
 
                     <span className="nomeCampo">Língua:</span>
-                    <span>Língua: {lingua}</span>
+                    <span>{lingua}</span>
 
                     <br />
 
