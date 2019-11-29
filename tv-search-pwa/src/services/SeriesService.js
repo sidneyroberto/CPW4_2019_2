@@ -4,7 +4,7 @@ export default class SeriesService {
 
     constructor() {
         this.service = axios.create({
-            baseURL: 'http://api.tvmaze.com/search'
+            baseURL: 'https://api.tvmaze.com/search'
         });
     }
 

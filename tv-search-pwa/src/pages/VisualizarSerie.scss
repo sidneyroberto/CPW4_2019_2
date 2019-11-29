@@ -30,3 +30,27 @@
     }
 
 }
+
+@media only screen and (max-width: 600px) {
+
+    #areaCartaz,
+    #areaDadosSerie {
+        display: block;
+        margin: auto;
+    }
+
+    #areaCartaz {
+        width: 100%;
+    }
+
+    #areaDadosSerie {
+
+        width: 90%;
+        padding: 0px 15px 30px 15px;
+
+
+        h2 {
+            text-align: center;
+        }
+    }
+}
